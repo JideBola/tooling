@@ -1,7 +1,7 @@
 variable "ami_id" {
   description = "The AMI ID for the Jenkins server"
   type        = string
-  default     = "ami-0f226ae5ce4b11922"
+  default     = "ami-0e8d228ad90af673b"
 }
 
 variable "instance_type" {
@@ -10,14 +10,19 @@ variable "instance_type" {
   default     = "t2.medium"
 }
 
+variable "security_group_id" {
+  description = "The security group ID to attach to the instance"
+  type        = string
+}
+
 variable "key_name" {
   description = "The key name for the Jenkins server"
   type        = string
-  default     = "DevOps_Train2024"
+  default     = "Docker"
 }
 
 variable "main-region" {
   description = "The AWS region to deploy resources"
   type        = string
-  default     = "us-west-2"
+  default     = "eu-west-2"
 }

@@ -16,6 +16,11 @@ variable "key_name" {
   default     = "DevOps_Train2024"
 }
 
+variable "security_group_id" {
+  description = "The security group ID to attach to the instance"
+  type        = string
+}
+
 variable "main-region" {
   description = "The AWS region to deploy resources"
   type        = string
