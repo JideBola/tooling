@@ -87,7 +87,7 @@ sudo systemctl enable postgresql
 sudo systemctl start postgresql
 
 # Set PostgreSQL to start on boot
-sudo systemctl enable postgresql
+# sudo systemctl enable postgresql
 
 # Verify PostgreSQL service status
 sudo systemctl status postgresql
