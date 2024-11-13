@@ -38,7 +38,7 @@ sudo apt install certbot python3-certbot-nginx -y
 sudo tee /etc/nginx/sites-available/jenkins.conf > /dev/null <<EOL
 server {
     listen 80;
-    server_name 35.178.199.144:8080;
+    server_name jenkins.branlestudio.com;
 
     location / {
         proxy_pass http://localhost:8080;
@@ -60,7 +60,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 # Obtain an SSL certificate using Certbot and configure Nginx
-sudo certbot --nginx -d 35.178.199.144:8080 --email bolarinwaibrahimo@gmail.com --non-interactive --agree-tos --redirect
+sudo certbot --nginx -d jenkins.branlestudio.com --email bolarinwaibrahimo@gmail.com --non-interactive --agree-tos --redirect
 
 # Setup a cron job to automatically renew the certificate
 echo "0 0 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab > /dev/null
