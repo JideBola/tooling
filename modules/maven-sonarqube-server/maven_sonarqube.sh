@@ -158,7 +158,7 @@ sudo apt install certbot python3-certbot-nginx -y
 sudo tee /etc/nginx/sites-available/sonarqube.conf > /dev/null <<EOL
 server {
     listen 80;
-    server_name sonarqube.dominionsystem.org;
+    server_name sonarqube.branlestudio.com;
 
     location / {
         proxy_pass http://localhost:8080;
