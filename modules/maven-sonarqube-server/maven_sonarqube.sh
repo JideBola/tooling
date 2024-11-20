@@ -180,7 +180,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 # Obtain an SSL certificate using Certbot and configure Nginx
-sudo certbot --nginx -d sonarqube.dominionsystem.org --email fusisoft@gmail.com --non-interactive --agree-tos --redirect
+sudo certbot --nginx -d sonarqube.branlestudio.com --email bolarinwaibrahimo@gmail.com --non-interactive --agree-tos --redirect
 
 # Setup a cron job to automatically renew the certificate
 echo "0 0 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab > /dev/null
@@ -188,7 +188,7 @@ echo "0 0 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab > /de
 # Restart Nginx to apply SSL configuration
 sudo systemctl restart nginx
 
-echo "sonarqube is now accessible via https://sonarqube.dominionsystem.org"
+echo "sonarqube is now accessible via https://sonarqube.branlestudio.com"
 
 
 
