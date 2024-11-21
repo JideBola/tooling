@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.bucket
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
@@ -37,10 +38,6 @@ resource "aws_s3_bucket_lifecycle_configuration" "terraform_state" {
   }
 }
 
-resource "aws_s3_bucket" "terraform_state" {
-  bucket        = var.bucket
-  force_destroy = true  # Ensures the bucket and its contents are deleted
-}
 
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = var.table
