@@ -23,6 +23,8 @@ module "maven-sonarqube-server" {
   key_name          = var.key_name
   security_group_id = var.security_group_id
   subnet_id         = var.subnet_id
+  root_volume_size  = var.root_volume_size # Pass the root volume size variable
+
   # main-region   = var.main-region
 
   #   db_name              = var.db_name

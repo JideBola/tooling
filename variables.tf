@@ -10,6 +10,18 @@ variable "instance_type" {
   default     = "t2.medium"
 }
 
+variable "instance_type_sonar" {
+  description = "The instance type for the instances"
+  type        = string
+  default     = "t2.large"
+}
+
+variable "root_volume_size" {
+  description = "The size of the root volume in GB"
+  type        = number
+  default     = 16 
+}
+
 
 variable "key_name" {
   description = "The key name for the instances"

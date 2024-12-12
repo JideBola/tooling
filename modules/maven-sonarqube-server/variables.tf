@@ -35,6 +35,12 @@ variable "subnet_id" {
   type        = string
 }
 
+variable "root_volume_size" {
+  description = "The size of the root volume in GB"
+  type        = number
+  default     = 16
+}
+
 # variable "db_name" {
 #   description = "The name of the PostgreSQL database"
 #   type        = string

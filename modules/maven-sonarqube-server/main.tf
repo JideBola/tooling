@@ -9,6 +9,10 @@ resource "aws_instance" "sonarqube" {
   vpc_security_group_ids      = [var.security_group_id]
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true
+  root_block_device {
+    volume_size = var.root_volume_size # Use the variable for the root volume size
+    volume_type = "gp3"                # Recommended volume type (adjust as needed)
+  }
   user_data                   = file("${path.module}/maven_sonarqube.sh")
   tags = {
     Name = "Maven-Sonarqube-Server"
